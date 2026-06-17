@@ -1,21 +1,18 @@
-/* Reset default margins and padding */
+/* Reset layouts */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* FIX: The center of the gradient (#14253f) now matches the exact 
-   hex color code of your logo's background rectangle. The edges 
-   fade out to a darker, deep navy (#080f1a) for a premium look.
-*/
+/* Background gradient centering */
 body, html {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle, #14253f 0%, #080f1a 100%);
+    background: radial-gradient(circle, #0e1e33 0%, #050b14 100%);
     overflow: hidden;
 }
 
@@ -24,11 +21,12 @@ body, html {
     padding: 20px;
 }
 
-/* Responsive logo sizing */
-.logo {
+/* Direct image target with forced blending */
+img {
     max-width: 90%;
     width: 800px;
     height: auto;
     display: block;
     user-select: none;
+    mix-blend-mode: screen !important;
 }
