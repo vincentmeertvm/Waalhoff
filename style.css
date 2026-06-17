@@ -1,30 +1,36 @@
-/* Reset layouts */
+/* Reset layout defaults */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Background gradient centering */
+/* 
+   FIX: Using CSS Grid with 100dvh (Dynamic Viewport Height). 
+   This forces a mathematical dead-center position across all 
+   desktop and mobile screens, ignoring browser address bars.
+*/
 body, html {
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100dvh; 
+    display: grid;
+    place-items: center;
     background: radial-gradient(circle, #0e1e33 0%, #050b14 100%);
     overflow: hidden;
 }
 
+/* Container limits width and keeps everything aligned */
 .container {
-    text-align: center;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    max-width: 800px;
     padding: 20px;
 }
 
-/* Direct image target with forced blending */
+/* Responsive logo scaling */
 img {
-    max-width: 90%;
-    width: 800px;
+    max-width: 100%;
     height: auto;
     display: block;
     user-select: none;
