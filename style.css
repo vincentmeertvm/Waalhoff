@@ -1,0 +1,33 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Radial gradient centered on the screen. 
+   Adjust hex colors to match the exact dark blue of your logo if needed.
+*/
+body, html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #162a45 0%, #0b1524 100%);
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive logo sizing */
+.logo {
+    max-width: 90%;
+    width: 800px;
+    height: auto;
+    display: block;
+    user-select: none;
+}
